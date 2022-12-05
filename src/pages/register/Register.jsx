@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEarthEurope, faEnvelope, faFileImage, faLock, faMapLocationDot, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
-import axios from "axios";
 import React, { useContext, useState } from "react";
 import "./register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import { axiosInstance } from "../../config";
 
 
 const Register = () => {
@@ -25,7 +25,7 @@ const Register = () => {
     data.append("file", file);
     data.append("upload_preset", "upload");
     try {
-      const uploadRes = await axios.post(
+      const uploadRes = await axiosInstance.post(
         "https://api.cloudinary.com/v1_1/dffsq6pem/image/upload",
         data
       );
@@ -36,10 +36,10 @@ const Register = () => {
         ...info,
         img: url,
       };
-      await axios.post("/auth/register", newUser);
+      await axiosInstance.post("/auth/register", newUser);
       dispatch({ type: "LOGIN_START" });
       try {
-        const res = await axios.post("/auth/login", info);
+        const res = await axiosInstance.post("/auth/login", info);
         dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
         navigate("/");
       } catch (err) {

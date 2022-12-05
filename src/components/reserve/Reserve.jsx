@@ -4,9 +4,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { SearchContext } from "../../context/SearchContext";
 import useFetch from "../../hooks/useFetch";
 import "./reserve.css";
-import { axiosInstance } from "../../config";
-import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
+import { axiosInstance } from "../../config";
 
 const Reserve = ({ setOpen, hotelId }) => {
   
@@ -65,7 +64,7 @@ const Reserve = ({ setOpen, hotelId }) => {
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`/rooms/availability/${roomId}`, {
+          const res = axiosInstance.put(`/rooms/availability/${roomId}`, {
             dates: alldates,
           });
           return res.data;
@@ -80,7 +79,7 @@ const Reserve = ({ setOpen, hotelId }) => {
         selectedDates,
      
       };
-      await axios.post("/reservation", newReservation);
+      await axiosInstance.post("/reservation", newReservation);
       setOpen(false);
     } catch (err) {}
   };

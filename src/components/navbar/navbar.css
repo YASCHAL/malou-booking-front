@@ -1,0 +1,69 @@
+.navbar {
+  background-color: rgb(8, 49, 139);
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  
+  min-width: 85rem;
+  width: 100%;
+}
+
+.navContainer {
+    
+   width: 90%;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.logo{
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.navButton{
+    margin-left: 20px;
+    height: 35px;
+    width: max-content;
+    border: 2px solid rgb(117, 160, 253);
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(8, 49, 139)
+    ;
+}
+.navButton:hover {
+    -webkit-transform: scale(1.5);
+	transform: scale(1.03);
+
+
+}
+.navItems {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navItems > button{
+    margin-left: 20px;
+    height: 35px;
+    border: none;
+   margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(8, 49, 139);
+}
+.navItems > img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+}
+
+.navItems > button:hover {
+    -webkit-transform: scale(1.5);
+	transform: scale(1.2);
+
+}

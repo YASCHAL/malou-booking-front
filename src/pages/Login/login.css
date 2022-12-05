@@ -1,0 +1,115 @@
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+  gap: 10px;
+  text-align: center;
+  height: 100vh;
+}
+.login_container {
+  padding: 4%;
+  border-radius: 5px;
+  gap: 10px;
+  background-color: rgba(104, 250, 230, 0.281);
+}
+
+
+
+.signIn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgba(39, 148, 238, 0.137);
+  color: green;
+  border-radius: 5px;
+}
+.signIn > h1 {
+  background: none;
+  color: rgb(22, 2, 138);
+}
+.sii {
+  border: none;
+  outline: 2px solid rgb(42, 105, 241);
+  background-color: white;
+  border-radius: 2px;
+  align-items: center;
+}
+.sii > input {
+  border: none;
+  width: 79%;
+  padding: 10px 5px;
+  margin-left: 5px;
+  outline: none;
+  font-size: 18px;
+}
+.sii_icon {
+  height: 20px;
+  width: 30px;
+  font-size: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: rgb(22, 2, 138);
+  border-right: 1px solid lightgray;
+}
+
+.login__button {
+  height: 40px;
+  border-radius: 2px;
+  background-color: rgb(18, 32, 228);
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.login__button:hover {
+  background-color: rgb(8, 49, 139);
+}
+
+.register__button {
+  height: 40px;
+  border-radius: 2px;
+  background-color: rgb(18, 32, 228);
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+.register__button:hover {
+  background-color: rgb(8, 49, 139);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}

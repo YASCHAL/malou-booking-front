@@ -1,0 +1,38 @@
+.pList{
+    width: 90%;
+    min-width: 78rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pListItem{
+    flex: 1;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.pListItem:hover {
+   -webkit-transform: scale(1.9);
+   transform: scale(1.05);
+   box-shadow: 0 10px 10px -5px;
+}
+
+.pListImg{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.pListTitle>h1{
+    font-size: 18px;
+    color: #444;
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+
+.pListTitle>h2{
+    font-size: 14px;
+    color: #444;
+    margin-left: 10px;
+}
